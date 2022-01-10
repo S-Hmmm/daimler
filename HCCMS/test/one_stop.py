@@ -22,8 +22,8 @@ if __name__ == '__main__':
         "junctionEnd": "2",
         "description": "3",
         "mapVersion": "HDMap-NDS-2.5.4-China-Daimler;97",
-        "clearanceStates": {"v1": "CLEARANCE"},
-        "links": [{"id": 1, "enabled": True}],
+        "clearanceStates": {"v1": "CLEARANCE"},  # NON_CLEARANCE, ACTIVATION
+        "links": [{"id": 1, "enabled": True}],  # 10001942 编译失败
         "startTime": "2022-01-07T00:00:00.000Z"
     }
     OneStop().create_and_release(tk_info)
