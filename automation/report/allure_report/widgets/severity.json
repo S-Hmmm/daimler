@@ -1,0 +1,141 @@
+[ {
+  "uid" : "1d192155aa96bbd6",
+  "name" : "test_get_fapconfigitems[del failed2]",
+  "time" : {
+    "start" : 1640071186960,
+    "stop" : 1640071187158,
+    "duration" : 198
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "33d3c92ed86fab2a",
+  "name" : "test_get_fapconfigitems[del success5]",
+  "time" : {
+    "start" : 1640071186449,
+    "stop" : 1640071186926,
+    "duration" : 477
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c9227131c05be517",
+  "name" : "test_get_fapconfigitems[del failed0]",
+  "time" : {
+    "start" : 1640071186945,
+    "stop" : 1640071187136,
+    "duration" : 191
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f46c58cf26ebdb27",
+  "name" : "test_get_fapconfigitems[del success3]",
+  "time" : {
+    "start" : 1640071185926,
+    "stop" : 1640071186438,
+    "duration" : 512
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "827255f64c6748f6",
+  "name" : "test_get_fapconfigitems[del failed5]",
+  "time" : {
+    "start" : 1640071187165,
+    "stop" : 1640071187361,
+    "duration" : 196
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "906b4e01453419a6",
+  "name" : "test_get_fapconfigitems[del success6]",
+  "time" : {
+    "start" : 1640071186450,
+    "stop" : 1640071186948,
+    "duration" : 498
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d36f94a5f4d7a390",
+  "name" : "test_get_fapconfigitems[del success4]",
+  "time" : {
+    "start" : 1640071186449,
+    "stop" : 1640071186976,
+    "duration" : 527
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ebc675c171893906",
+  "name" : "test_get_fapconfigitems[del success7]",
+  "time" : {
+    "start" : 1640071186451,
+    "stop" : 1640071187195,
+    "duration" : 744
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ab3d5fe49ab1e732",
+  "name" : "test_get_fapconfigitems[del success1]",
+  "time" : {
+    "start" : 1640071185942,
+    "stop" : 1640071186427,
+    "duration" : 485
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "112a9f15eb43a8a1",
+  "name" : "test_get_fapconfigitems[del success2]",
+  "time" : {
+    "start" : 1640071185931,
+    "stop" : 1640071186428,
+    "duration" : 497
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5ff5f5d6db7f4efb",
+  "name" : "test_get_fapconfigitems[del failed1]",
+  "time" : {
+    "start" : 1640071186983,
+    "stop" : 1640071187164,
+    "duration" : 181
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a6d8cdcd78270709",
+  "name" : "test_get_fapconfigitems[del failed4]",
+  "time" : {
+    "start" : 1640071187144,
+    "stop" : 1640071187336,
+    "duration" : 192
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5f4c59abfe449152",
+  "name" : "test_get_fapconfigitems[del success0]",
+  "time" : {
+    "start" : 1640071185954,
+    "stop" : 1640071186427,
+    "duration" : 473
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c1790f59b28ab990",
+  "name" : "test_get_fapconfigitems[del failed3]",
+  "time" : {
+    "start" : 1640071187205,
+    "stop" : 1640071187405,
+    "duration" : 200
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

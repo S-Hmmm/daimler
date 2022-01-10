@@ -1,0 +1,404 @@
+---
+method: GET
+url: https://fcicn-nonprod.query.api.dvb.corpinter.net.cn/fci/v1/fapconfigitems/search/bbox
+cases:
+  - case: search success different vin 01
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 43
+        maxLon: 101
+        minLat: 40
+        minLon: 100
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239020801"
+        idcHwObjectNumber: "0999015600"
+  - case: search success different gps 01
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 120
+        minLat: 38
+        minLon: 115
+        namespace: prod
+        vin: W1K6G6BB2MA016102
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239021817"
+        idcHwObjectNumber: "2239018509"
+  - case: search success different vin 02
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 120
+        minLat: 38
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239020801"
+        idcHwObjectNumber: "0999015600"
+  - case: search success different gps 02
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 38
+        maxLon: 120
+        minLat: 37
+        minLon: 115
+        namespace: prod
+        vin: W1K6G6BB2MA016102
+    expected:
+      status: 1
+      result: []
+  - case: search success different gps 03
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 66.21261
+        maxLon: 39
+        minLat: 64.12648
+        minLon: 38.01
+        namespace: prod
+        vin: W1K6G6BB2MA016102
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239021817"
+        idcHwObjectNumber: "2239018509"
+  - case: search success different vin 03
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 117
+        minLat: 38
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239020801"
+        idcHwObjectNumber: "0999015600"
+  - case: search success no fields
+    http:
+      headers: {}
+      params:
+        maxLat: 40
+        maxLon: 117
+        minLat: 38
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+  - case: search success no namespace
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 117
+        minLat: 38
+        minLon: 115
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239020801"
+        idcHwObjectNumber: "0999015600"
+  - case: search success no vin
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 117
+        minLat: 38
+        minLon: 115
+        namespace: prod
+    expected:
+      status: 1
+      scope: all
+  - case: search success no fields namespace vin
+    http:
+      headers: {}
+      params:
+        maxLat: 40
+        maxLon: 117
+        minLat: 38
+        minLon: 115
+    expected:
+      status: 1
+      scope: all
+  - case: search success decimal gps
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40.111236
+        maxLon: 117.632641
+        minLat: 38.000211
+        minLon: 115.369523
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239020801"
+        idcHwObjectNumber: "0999015600"
+  - case: search failed invalid gps
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLon: 117
+        minLat: 38
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0
+  - case: search failed repeat gps
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 115
+        minLat: 40
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0
+  - case: search success long gps
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40.1234561231
+        maxLon: 117.2345856787
+        minLat: 38.1003125451
+        minLon: 115.1003215664
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239020801"
+        idcHwObjectNumber: "0999015600"
+  - case: search failed repeat lat
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 42
+        maxLon: 117
+        minLat: 42
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0
+  - case: search failed repeat lon
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 100.0326
+        minLat: 38
+        minLon: 100.0326
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0
+  - case: search failed invalid vin 01
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 117
+        minLat: 38
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ100365
+    expected:
+      status: 0
+  - case: search failed invalid vin 02
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 117
+        minLat: 38
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ1
+    expected:
+      status: 0
+  - case: search failed minlat > maxlat
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 38
+        maxLon: 117
+        minLat: 40
+        minLon: 115
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0
+  - case: search failed minlon > maxlon
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 115
+        minLat: 38
+        minLon: 117
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0
+  - case: search failed no params
+    http:
+      headers: {}
+    expected:
+      status: 0
+  - case: search success minlon maxlon
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 180
+        minLat: 38
+        minLon: -180
+        namespace: prod
+        vin: W1K6G6BB2MA016102
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239021817"
+        idcHwObjectNumber: "2239018509"
+  - case: search success minlat maxlat
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 90
+        maxLon: 117
+        minLat: -90
+        minLon: 115
+        namespace: prod
+        vin: W1K6G6BB2MA016102
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239021817"
+        idcHwObjectNumber: "2239018509"
+  - case: search success minlat lon maxlat lon
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 90
+        maxLon: 180
+        minLat: -90
+        minLon: -180
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239020801"
+        idcHwObjectNumber: "0999015600"
+  - case: search success minlat lon zero
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 40
+        maxLon: 117
+        minLat: 0
+        minLon: 0
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 1
+      tsh:
+        vehicleModelType: "223"
+        idcSwObjectNumber: "2239020801"
+        idcHwObjectNumber: "0999015600"
+  - case: search failed non china region
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 70
+        maxLon: 50
+        minLat: 60
+        minLon: 40
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0
+  - case: search failed negative gps
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: -40
+        maxLon: -120
+        minLat: -38
+        minLon: -115
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0
+  - case: search failed minlat > maxlat minlon > maxlon
+    http:
+      headers: {}
+      params:
+        fields: ALL
+        maxLat: 38
+        maxLon: 115
+        minLat: 40
+        minLon: 117
+        namespace: prod
+        vin: W1K6G8CB4NZ100387
+    expected:
+      status: 0

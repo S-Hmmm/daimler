@@ -1,0 +1,107 @@
+{
+  "uid" : "112a9f15eb43a8a1",
+  "name" : "test_get_fapconfigitems[del success2]",
+  "fullName" : "tests.FCIP.del_fapconfigitems_test#test_get_fapconfigitems",
+  "historyId" : "d24cfefd1ab45d9bb1f884ae4b90189a",
+  "time" : {
+    "start" : 1640071185931,
+    "stop" : 1640071186428,
+    "duration" : 497
+  },
+  "description" : "无",
+  "descriptionHtml" : "<p>无</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "token",
+    "time" : {
+      "start" : 1640071185539,
+      "stop" : 1640071185930,
+      "duration" : 391
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "无",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "16ec8e1be42dc5bd",
+      "name" : "status_code",
+      "source" : "16ec8e1be42dc5bd.attach",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "269c3bc1a49e499f",
+      "name" : "headers",
+      "source" : "269c3bc1a49e499f.txt",
+      "type" : "text/plain",
+      "size" : 391
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 2
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "删除FCI"
+  }, {
+    "name" : "tag",
+    "value" : "del_item"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.FCIP"
+  }, {
+    "name" : "suite",
+    "value" : "del_fapconfigitems_test"
+  }, {
+    "name" : "host",
+    "value" : "DCNA1837"
+  }, {
+    "name" : "thread",
+    "value" : "2996-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.FCIP.del_fapconfigitems_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected",
+    "value" : "{'status': 1}"
+  }, {
+    "name" : "http",
+    "value" : "{'headers': {}, 'url': None}"
+  }, {
+    "name" : "item_id",
+    "value" : "6851"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "del_item" ]
+  },
+  "source" : "112a9f15eb43a8a1.json",
+  "parameterValues" : [ "{'status': 1}", "{'headers': {}, 'url': None}", "6851" ]
+}

@@ -1,0 +1,16 @@
+<h1>{{case.method}}</h1>
+<li>
+    name: {{case.case_name}}
+</li>
+<li>
+    method:{{case.method}}
+</li>
+{% if data %}
+<li>
+    data:{{case.data}}
+</li>
+{% else %}
+<li>
+    data:null
+</li>
+{% endif %}

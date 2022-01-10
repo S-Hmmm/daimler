@@ -1,0 +1,32 @@
+---
+method: DELETE
+url: https://fcicn-nonprod.query.api.dvb.corpinter.net.cn/fci/v1/fapconfigitems/
+cases:
+  - case: del success
+    http:
+      headers: {}
+      url:
+    id:
+      - 6701
+      - 6751
+      - 6851
+      - 6801
+      - 7001
+      - 6901
+      - 6951
+      - 7051
+    expected:
+      status: 1
+  - case: del failed
+    http:
+      headers: {}
+      url:
+    id:
+      - 4001
+      - ''
+      - 4002
+      - 4001.11
+      - -5101
+      - 92233720368547758078
+    expected:
+      status: 0

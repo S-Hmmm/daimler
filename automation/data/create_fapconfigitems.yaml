@@ -1,0 +1,502 @@
+---
+method: POST
+url: https://fcicn-nonprod.query.api.dvb.corpinter.net.cn/fci/v1/fapconfigitems
+cases:
+  - case: create item success 01
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 61V1vw==
+        gpsTrail:
+          - lat: 9
+            lon: 79
+          - lat: 9
+            lon: 79.12456
+          - lat: 9
+            lon: 79.3546
+        matchers:
+          - vehicleModelType: '167'
+            idcHwObjectNumber: '0999015600'
+            idcSwObjectNumber: '2239020801'
+        namespace: prod
+    expected:
+      status: 1
+  - case: create item success match W1K6G8CB4NZ100387 01
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 62V3vw==
+        gpsTrail:
+          - lat: 42
+            lon: 100.0326
+          - lat: 42.66664
+            lon: 100.2645
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 1
+  - case: create item success match W1K6G8CB4NZ100387 namespace test
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 31V3vw==
+        gpsTrail:
+          - lat: 42.798
+            lon: 100.0326
+          - lat: 42.66664
+            lon: 100.0215
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 1
+  - case: create item success 32 gpsTrail
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 96V3vw==
+        gpsTrail:
+          - lat: 42
+            lon: 100.0326
+          - lat: 42
+            lon: 100.2645
+          - lat: 42
+            lon: 100.26466
+          - lat: 42
+            lon: 100.26467
+          - lat: 42
+            lon: 100.26468
+          - lat: 42
+            lon: 100.26469
+          - lat: 42
+            lon: 100.26470
+          - lat: 42
+            lon: 100.26471
+          - lat: 42
+            lon: 100.26472
+          - lat: 42
+            lon: 100.26473
+          - lat: 42
+            lon: 100.26474
+          - lat: 42
+            lon: 100.26475
+          - lat: 42
+            lon: 100.26476
+          - lat: 42
+            lon: 100.26477
+          - lat: 42
+            lon: 100.26478
+          - lat: 42
+            lon: 100.26479
+          - lat: 42
+            lon: 100.26480
+          - lat: 42
+            lon: 100.26481
+          - lat: 42
+            lon: 100.26482
+          - lat: 42
+            lon: 100.26483
+          - lat: 42
+            lon: 100.26484
+          - lat: 42
+            lon: 100.26485
+          - lat: 42
+            lon: 100.26486
+          - lat: 42
+            lon: 100.26487
+          - lat: 42
+            lon: 100.26488
+          - lat: 42
+            lon: 100.26489
+          - lat: 42
+            lon: 100.264891
+          - lat: 42
+            lon: 100.264892
+          - lat: 42
+            lon: 100.264893
+          - lat: 42
+            lon: 100.264894
+          - lat: 42
+            lon: 100.264895
+          - lat: 42
+            lon: 100.264896
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 1
+  - case: create item success match W1K6G8CB4NZ100387 02
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 16V2vw==
+        gpsTrail:
+          - lat: 39.972093
+            lon: 116.468069
+          - lat: 39.971965
+            lon: 116.468064
+          - lat: 39.971903
+            lon: 116.468014
+          - lat: 39.971803
+            lon: 116.468004
+          - lat: 39.971801
+            lon: 116.468000
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 1
+  - case: create item success 2 gpsTrail matcher None
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 16V2vw==
+        gpsTrail:
+          - lat: 39.972093
+            lon: 116.468069
+          - lat: 39.971965
+            lon: 116.468064
+        matchers:
+          - vehicleModelType:
+            idcHwObjectNumber:
+            idcSwObjectNumber:
+        namespace: prod
+    expected:
+      status: 1
+  - case: create item success matcher type 223
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 13V2vw==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.972965
+            lon: 116.468064
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber:
+            idcSwObjectNumber:
+        namespace: prod
+    expected:
+      status: 1
+  - case: create item success matcher sw hw W1K6G8CB4NZ100387
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 10V2vw==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.972965
+            lon: 116.468064
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 1
+  - case: create item failed no body
+    http:
+      headers:
+        content-type: application/json
+    expected:
+      status: 0
+  - case: create item failed no data
+    http:
+      headers:
+        content-type: application/json
+      json:
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.972965
+            lon: 116.468064
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 0
+  - case: create item failed no gpsTrail
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 16U3ml==
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 0
+  - case: create item failed no namespace
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 16U3ll==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.972965
+            lon: 116.468064
+        matchers:
+          - vehicleModelType: 223
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+    expected:
+      status: 0
+  - case: create item failed matcher modeltype length == 5
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 16U3tt==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.972965
+            lon: 116.468064
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 0
+  - case: create item failed 1 gpsTrail
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 16U3gs==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 0
+  - case: create item failed 33 gpsTrail
+    http:
+      headers:
+        content-type: application/json
+      json:
+        data: 16U3se==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.973083
+            lon: 116.468059
+          - lat: 39.973073
+            lon: 116.468049
+          - lat: 39.973063
+            lon: 116.468039
+          - lat: 39.973053
+            lon: 116.468029
+          - lat: 39.973043
+            lon: 116.468019
+          - lat: 39.973033
+            lon: 116.468009
+          - lat: 39.973023
+            lon: 116.467999
+          - lat: 39.973013
+            lon: 116.467989
+          - lat: 39.973003
+            lon: 116.467979
+          - lat: 39.972993
+            lon: 116.467969
+          - lat: 39.972983
+            lon: 116.467959
+          - lat: 39.972973
+            lon: 116.467949
+          - lat: 39.972963
+            lon: 116.467939
+          - lat: 39.972953
+            lon: 116.467929
+          - lat: 39.972943
+            lon: 116.467919
+          - lat: 39.972933
+            lon: 116.467909
+          - lat: 39.972923
+            lon: 116.467899
+          - lat: 39.972913
+            lon: 116.467889
+          - lat: 39.972903
+            lon: 116.467879
+          - lat: 39.972893
+            lon: 116.467869
+          - lat: 39.972883
+            lon: 116.467859
+          - lat: 39.972873
+            lon: 116.467849
+          - lat: 39.972863
+            lon: 116.467839
+          - lat: 39.972853
+            lon: 116.467829
+          - lat: 39.972843
+            lon: 116.467819
+          - lat: 39.972833
+            lon: 116.467809
+          - lat: 39.972823
+            lon: 116.467799
+          - lat: 39.972813
+            lon: 116.467789
+          - lat: 39.972803
+            lon: 116.467779
+          - lat: 39.972793
+            lon: 116.467769
+          - lat: 39.972783
+            lon: 116.467759
+          - lat: 39.972773
+            lon: 116.467749
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 0
+  - case: create item failed no content-type
+    http:
+      headers: {}
+      json:
+        data: 16U3gs==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.873093
+            lon: 116.368069
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 0
+  - case: create item failed negative gpsTrail
+    http:
+      headers: {}
+      json:
+        data: 16U3gs==
+        gpsTrail:
+          - lat: -39.973093
+            lon: -116.468069
+          - lat: -39.873093
+            lon: -116.368069
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 0
+  - case: create item failed long gpsTrail
+    http:
+      headers: {}
+      json:
+        data: 16U3gs==
+        gpsTrail:
+          - lat: 39.97306299999999
+            lon: 116.46803899999999
+          - lat: 39.973052999999986
+            lon: 116.46802899999999
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: prod
+    expected:
+      status: 0
+  - case: create item failed test namespace
+    http:
+      headers: {}
+      json:
+        data: 16U3gs==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.873093
+            lon: 116.368069
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: test
+    expected:
+      status: 0
+  - case: create item failed zero gps
+    http:
+      headers: {}
+      json:
+        data: 16U3gs==
+        gpsTrail:
+          - lat: 0
+            lon: 0
+          - lat: 0
+            lon: 0
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: test
+    expected:
+      status: 0
+  - case: create item failed empty gps
+    http:
+      headers: {}
+      json:
+        data: 16U3gs==
+        gpsTrail:
+          - lat:
+            lon:
+          - lat:
+            lon:
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: test
+    expected:
+      status: 0
+  - case: create item failed repeat gps
+    http:
+      headers: {}
+      json:
+        data: 16U3gs==
+        gpsTrail:
+          - lat: 50
+            lon: 113
+          - lat: 50
+            lon: 113
+        matchers:
+          - vehicleModelType: 22333
+            idcHwObjectNumber: 0999015600
+            idcSwObjectNumber: 2239020801
+        namespace: test
+    expected:
+      status: 0

@@ -1,0 +1,113 @@
+{
+  "uid" : "1d192155aa96bbd6",
+  "name" : "test_get_fapconfigitems[del failed2]",
+  "fullName" : "tests.FCIP.del_fapconfigitems_test#test_get_fapconfigitems",
+  "historyId" : "019e4315650930d035dd6450c36aea4d",
+  "time" : {
+    "start" : 1640071186960,
+    "stop" : 1640071187158,
+    "duration" : 198
+  },
+  "description" : "无",
+  "descriptionHtml" : "<p>无</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "token",
+    "time" : {
+      "start" : 1640071185539,
+      "stop" : 1640071185930,
+      "duration" : 391
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "无",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "950a46e77454850c",
+      "name" : "status_code",
+      "source" : "950a46e77454850c.attach",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "d95fe71bad081148",
+      "name" : "headers",
+      "source" : "d95fe71bad081148.txt",
+      "type" : "text/plain",
+      "size" : 418
+    }, {
+      "uid" : "96983baa8ecca2c1",
+      "name" : "resp_body",
+      "source" : "96983baa8ecca2c1.attach",
+      "type" : "text/plain",
+      "size" : 189
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 3
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "删除FCI"
+  }, {
+    "name" : "tag",
+    "value" : "del_item"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.FCIP"
+  }, {
+    "name" : "suite",
+    "value" : "del_fapconfigitems_test"
+  }, {
+    "name" : "host",
+    "value" : "DCNA1837"
+  }, {
+    "name" : "thread",
+    "value" : "2996-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.FCIP.del_fapconfigitems_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected",
+    "value" : "{'status': 0}"
+  }, {
+    "name" : "http",
+    "value" : "{'headers': {}, 'url': None}"
+  }, {
+    "name" : "item_id",
+    "value" : "4002"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "del_item" ]
+  },
+  "source" : "1d192155aa96bbd6.json",
+  "parameterValues" : [ "{'status': 0}", "{'headers': {}, 'url': None}", "4002" ]
+}

@@ -1,0 +1,7 @@
+{
+  "timestamp" : "2021-12-21T07:19:47.678+0000",
+  "status" : 405,
+  "error" : "Method Not Allowed",
+  "message" : "Request method 'DELETE' not supported",
+  "path" : "/fci/v1/fapconfigitems/"
+}

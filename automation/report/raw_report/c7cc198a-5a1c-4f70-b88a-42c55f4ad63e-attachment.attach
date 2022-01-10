@@ -1,0 +1,6 @@
+{
+  "error-message" : "fapConfigItem could not be found",
+  "error-code" : "fci_fapConfigItemNotFoundServiceException",
+  "trace-id" : "6a0572e6280128e3",
+  "span-id" : "4dab7ec67fc7db29"
+}

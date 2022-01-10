@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "D:\Work\study\wx_gui.py", line 32, in OnInit
+    self.Frame = MainFrame()
+  File "D:\Work\study\wx_gui.py", line 14, in __init__
+    super().__init__(self, None, -1, APP_TITLE, style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER)
+TypeError: Frame(): arguments did not match any overloaded call:
+  overload 1: too many arguments
+  overload 2: argument 2 has unexpected type 'NoneType'
+OnInit returned false, exiting...

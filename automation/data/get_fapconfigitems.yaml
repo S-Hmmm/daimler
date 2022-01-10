@@ -1,0 +1,33 @@
+---
+method: GET
+url: https://fcicn-nonprod.query.api.dvb.corpinter.net.cn/fci/v1/fapconfigitems/
+cases:
+  - case: get fci success
+    http:
+      headers: {}
+      url:
+    id:
+      - 6351
+      - 6301
+      - 6401
+      - 6451
+      - 6501
+      - 6551
+      - 6601
+      - 6651
+    expected:
+      status: 1
+  - case: get fci failed
+    http:
+      headers: {}
+      url:
+    id:
+      - 4001
+      - 4001.32
+      - None
+      - ''
+      - -401
+      - 92233720368547758078
+      - -92233720368547758078
+    ecpected:
+      status: 0

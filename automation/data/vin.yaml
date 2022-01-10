@@ -1,0 +1,17 @@
+---
+- vin: W1K6G8CB4NZ100387
+  vehicleModelType: "223"
+  idcSwObjectNumber: "2239020801"
+  idcHwObjectNumber: "0999015600"
+- vin: W1K6G6BB2MA016102
+  vehicleModelType: "223"
+  idcSwObjectNumber: "2239021817"
+  idcHwObjectNumber: "2239018509"
+- vin: W1NFF5KE4LA228105
+  vehicleModelType: "213"
+  idcSwObjectNumber: "2139021122"
+  idcHwObjectNumber: "2139012913"
+- vin: WDCFB5KE6KA006760
+  vehicleModelType: "213"
+  idcSwObjectNumber: "2139027819"
+  idcHwObjectNumber: "2139018009"

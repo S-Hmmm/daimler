@@ -1,0 +1,113 @@
+{
+  "uid" : "827255f64c6748f6",
+  "name" : "test_get_fapconfigitems[del failed5]",
+  "fullName" : "tests.FCIP.del_fapconfigitems_test#test_get_fapconfigitems",
+  "historyId" : "ee1dddbd6419dae8f4e6cd4ae1c0e769",
+  "time" : {
+    "start" : 1640071187165,
+    "stop" : 1640071187361,
+    "duration" : 196
+  },
+  "description" : "无",
+  "descriptionHtml" : "<p>无</p>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ {
+    "name" : "token",
+    "time" : {
+      "start" : 1640071185539,
+      "stop" : 1640071185930,
+      "duration" : 391
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : false,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "无",
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "70bf33b350579f93",
+      "name" : "status_code",
+      "source" : "70bf33b350579f93.attach",
+      "type" : "text/plain",
+      "size" : 3
+    }, {
+      "uid" : "288079a839309432",
+      "name" : "headers",
+      "source" : "288079a839309432.txt",
+      "type" : "text/plain",
+      "size" : 418
+    }, {
+      "uid" : "8d43aae6d6262803",
+      "name" : "resp_body",
+      "source" : "8d43aae6d6262803.attach",
+      "type" : "text/plain",
+      "size" : 309
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "hasContent" : true,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 3
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "删除FCI"
+  }, {
+    "name" : "tag",
+    "value" : "del_item"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests.FCIP"
+  }, {
+    "name" : "suite",
+    "value" : "del_fapconfigitems_test"
+  }, {
+    "name" : "host",
+    "value" : "DCNA1837"
+  }, {
+    "name" : "thread",
+    "value" : "2996-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.FCIP.del_fapconfigitems_test"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "expected",
+    "value" : "{'status': 0}"
+  }, {
+    "name" : "http",
+    "value" : "{'headers': {'authorization': 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjYyY2I5MzJhZjNkNTUyY2JhYzQzMjFmOTdlOTJiOWNlZTJhYTBkZmMifQ.eyJpc3MiOiJodHRwczovL3Nzb2FscGhhLmR2Yi5jb3JwaW50ZXIubmV0LmNuL3YxIiwic3ViIjoiREFJVkJBRE1fTUlDVE1fQ05fTk9OUFJPRF8wMDM3MSIsImF1ZCI6WyJEQUlWQkFETV9NSUNUTV9DTl9OT05QUk9EXzAwNDQxIiwiREFJVkJBRE1fTUlDVE1fQ05fTk9OUFJPRF8wMDM3MSJdLCJleHAiOjE2NDAwNzQ3ODYsImlhdCI6MTY0MDA3MTE4NiwiYXpwIjoiREFJVkJBRE1fTUlDVE1fQ05fTk9OUFJPRF8wMDM3MSIsInNjb3BlIjpbIm9wZW5pZCIsImdyb3VwcyJdLCJ1c2VyX3R5cGUiOiJ0ZWNobmljYWwifQ.tIL3Wx2zqXe5xBHEr-EIC9f9cq8CLNcH6_-DQAnl9vNYtUfL4em8kBPfTzRR9k7z5-H0YcVch8kdVV2JUBf7Avp35VT3zurTgodAQuITN26LaJ6xaphPrad_OBc9bBecG8NHuDACfiCsIkeOTcF3GPobhYMcVlo09hExetYW2Ol2B4S2HCoqePu9e7rw-3piqCcUVkS5NqGcnvFDXYXBZ8OzgmfiVPO2WuzyYRx-1SxJ-EgGymOwCtUwo3aY1-f9GMKt0v7j5GyVjlWX5h7NH21rqqSBfnlEElCbTC8hY-MkYahlzavByXw0Zd4oDkx4KNE-_-hn5P0gHEQchx_71Q'}, 'url': 'https://fcicn-nonprod.query.api.dvb.corpinter.net.cn/fci/v1/fapconfigitems/4002'}"
+  }, {
+    "name" : "item_id",
+    "value" : "92233720368547758078"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "del_item" ]
+  },
+  "source" : "827255f64c6748f6.json",
+  "parameterValues" : [ "{'status': 0}", "{'headers': {'authorization': 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjYyY2I5MzJhZjNkNTUyY2JhYzQzMjFmOTdlOTJiOWNlZTJhYTBkZmMifQ.eyJpc3MiOiJodHRwczovL3Nzb2FscGhhLmR2Yi5jb3JwaW50ZXIubmV0LmNuL3YxIiwic3ViIjoiREFJVkJBRE1fTUlDVE1fQ05fTk9OUFJPRF8wMDM3MSIsImF1ZCI6WyJEQUlWQkFETV9NSUNUTV9DTl9OT05QUk9EXzAwNDQxIiwiREFJVkJBRE1fTUlDVE1fQ05fTk9OUFJPRF8wMDM3MSJdLCJleHAiOjE2NDAwNzQ3ODYsImlhdCI6MTY0MDA3MTE4NiwiYXpwIjoiREFJVkJBRE1fTUlDVE1fQ05fTk9OUFJPRF8wMDM3MSIsInNjb3BlIjpbIm9wZW5pZCIsImdyb3VwcyJdLCJ1c2VyX3R5cGUiOiJ0ZWNobmljYWwifQ.tIL3Wx2zqXe5xBHEr-EIC9f9cq8CLNcH6_-DQAnl9vNYtUfL4em8kBPfTzRR9k7z5-H0YcVch8kdVV2JUBf7Avp35VT3zurTgodAQuITN26LaJ6xaphPrad_OBc9bBecG8NHuDACfiCsIkeOTcF3GPobhYMcVlo09hExetYW2Ol2B4S2HCoqePu9e7rw-3piqCcUVkS5NqGcnvFDXYXBZ8OzgmfiVPO2WuzyYRx-1SxJ-EgGymOwCtUwo3aY1-f9GMKt0v7j5GyVjlWX5h7NH21rqqSBfnlEElCbTC8hY-MkYahlzavByXw0Zd4oDkx4KNE-_-hn5P0gHEQchx_71Q'}, 'url': 'https://fcicn-nonprod.query.api.dvb.corpinter.net.cn/fci/v1/fapconfigitems/4002'}", "92233720368547758078" ]
+}

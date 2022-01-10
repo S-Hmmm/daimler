@@ -1,0 +1,491 @@
+---
+method: PUT
+url: https://fcicn-nonprod.query.api.dvb.corpinter.net.cn/fci/v1/fapconfigitems/
+cases:
+  - case: update success 01
+    http:
+      headers:
+        content-type: application/json
+      url: 5151
+      params:
+        mode: update
+      json:
+        data: 96V2vw==
+        gpsTrail:
+          - lat: 60
+            lon: 39
+          - lat: 59.135546
+            lon: 38.1501532
+          - lat: 59.4513
+            lon: 38.151654
+        matchers:
+          - vehicleModelType: '123'
+            idcSwObjectNumber:
+            idcHwObjectNumber:
+        namespace: prod
+    expected:
+      status: 1
+  - case: update success 02
+    http:
+      headers:
+        content-type: application/json
+      url: 5201
+      params:
+        mode: update
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 66
+            lon: 39
+          - lat: 65.662
+            lon: 38.221114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 1
+  - case: update success 03
+    http:
+      headers:
+        content-type: application/json
+      url: 5251
+      params:
+        mode: update
+      json:
+        data: 31V2vw==
+        gpsTrail:
+          - lat: 66
+            lon: 39
+          - lat: 65.662
+            lon: 38.221114
+        matchers:
+          - vehicleModelType:
+            idcSwObjectNumber:
+            idcHwObjectNumber:
+        namespace: prod
+    expected:
+      status: 1
+  - case: update success 04
+    http:
+      headers:
+        content-type: application/json
+      url: 5351
+      params:
+        mode: update
+      json:
+        data: 31V2vw==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.973083
+            lon: 116.468059
+          - lat: 39.973073
+            lon: 116.468049
+          - lat: 39.973063
+            lon: 116.468039
+          - lat: 39.973053
+            lon: 116.468029
+          - lat: 39.973043
+            lon: 116.468019
+          - lat: 39.973033
+            lon: 116.468009
+          - lat: 39.973023
+            lon: 116.467999
+          - lat: 39.973013
+            lon: 116.467989
+          - lat: 39.973003
+            lon: 116.467979
+          - lat: 39.972993
+            lon: 116.467969
+          - lat: 39.972983
+            lon: 116.467959
+          - lat: 39.972973
+            lon: 116.467949
+          - lat: 39.972963
+            lon: 116.467939
+          - lat: 39.972953
+            lon: 116.467929
+          - lat: 39.972943
+            lon: 116.467919
+          - lat: 39.972933
+            lon: 116.467909
+          - lat: 39.972923
+            lon: 116.467899
+          - lat: 39.972913
+            lon: 116.467889
+          - lat: 39.972903
+            lon: 116.467879
+          - lat: 39.972893
+            lon: 116.467869
+          - lat: 39.972883
+            lon: 116.467859
+          - lat: 39.972873
+            lon: 116.467849
+          - lat: 39.972863
+            lon: 116.467839
+          - lat: 39.972853
+            lon: 116.467829
+          - lat: 39.972843
+            lon: 116.467819
+          - lat: 39.972833
+            lon: 116.467809
+          - lat: 39.972823
+            lon: 116.467799
+          - lat: 39.972813
+            lon: 116.467789
+          - lat: 39.972803
+            lon: 116.467779
+          - lat: 39.972793
+            lon: 116.467769
+          - lat: 39.972783
+            lon: 116.467759
+        matchers:
+          - vehicleModelType:
+            idcSwObjectNumber:
+            idcHwObjectNumber:
+        namespace: prod
+    expected:
+      status: 1
+  - case: update success no mode
+    http:
+      headers:
+        content-type: application/json
+      url: 5401
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 66
+            lon: 39
+          - lat: 65.662
+            lon: 38.221114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 1
+  - case: update failed no id
+    http:
+      headers:
+        content-type: application/json
+      url:
+      params:
+        mode: update
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 66
+            lon: 39
+          - lat: 65.662
+            lon: 38.221114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
+  - case: update failed no id no mode
+    http:
+      headers:
+        content-type: application/json
+      url:
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 66
+            lon: 39
+          - lat: 65.662
+            lon: 38.221114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
+  - case: update failed invalid id
+    http:
+      headers:
+        content-type: application/json
+      url: 4003
+      params:
+        mode: update
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 66
+            lon: 39
+          - lat: 65.662
+            lon: 38.221114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
+  - case: update failed decimal id
+    http:
+      headers:
+        content-type: application/json
+      url: 5551.221
+      params:
+        mode: update
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 66
+            lon: 39
+          - lat: 65.662
+            lon: 38.221114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
+  - case: update failed no body
+    http:
+      headers:
+        content-type: application/json
+      url: 5451
+      params:
+        mode: update
+    expected:
+      status: 0
+  - case: update failed no data gpsTrail
+    http:
+      headers:
+        content-type: application/json
+      url: 5451
+      params:
+        mode: update
+      json:
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
+  - case: update failed empty body
+    http:
+      headers:
+        content-type: application/json
+      url: 5451
+      params:
+        mode: update
+      json: {}
+    expected:
+      status: 0
+  - case: update failed 1 gpsTrail
+    http:
+      headers:
+        content-type: application/json
+      url: 5451
+      params:
+        mode: update
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 65.662
+            lon: 38.221114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
+  - case: update failed 33 gpsTrail
+    http:
+      headers:
+        content-type: application/json
+      url: 5451
+      params:
+        mode: update
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 39.973093
+            lon: 116.468069
+          - lat: 39.973083
+            lon: 116.468059
+          - lat: 39.973073
+            lon: 116.468049
+          - lat: 39.973063
+            lon: 116.468039
+          - lat: 39.973053
+            lon: 116.468029
+          - lat: 39.973043
+            lon: 116.468019
+          - lat: 39.973033
+            lon: 116.468009
+          - lat: 39.973023
+            lon: 116.467999
+          - lat: 39.973013
+            lon: 116.467989
+          - lat: 39.973003
+            lon: 116.467979
+          - lat: 39.972993
+            lon: 116.467969
+          - lat: 39.972983
+            lon: 116.467959
+          - lat: 39.972973
+            lon: 116.467949
+          - lat: 39.972963
+            lon: 116.467939
+          - lat: 39.972953
+            lon: 116.467929
+          - lat: 39.972943
+            lon: 116.467919
+          - lat: 39.972933
+            lon: 116.467909
+          - lat: 39.972923
+            lon: 116.467899
+          - lat: 39.972913
+            lon: 116.467889
+          - lat: 39.972903
+            lon: 116.467879
+          - lat: 39.972893
+            lon: 116.467869
+          - lat: 39.972883
+            lon: 116.467859
+          - lat: 39.972873
+            lon: 116.467849
+          - lat: 39.972863
+            lon: 116.467839
+          - lat: 39.972853
+            lon: 116.467829
+          - lat: 39.972843
+            lon: 116.467819
+          - lat: 39.972833
+            lon: 116.467809
+          - lat: 39.972823
+            lon: 116.467799
+          - lat: 39.972813
+            lon: 116.467789
+          - lat: 39.972803
+            lon: 116.467779
+          - lat: 39.972793
+            lon: 116.467769
+          - lat: 39.972783
+            lon: 116.467759
+          - lat: 39.972773
+            lon: 116.467749
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
+  - case: update success no content-type
+    http:
+      headers: {}
+      url: 5451
+      params:
+        mode: update
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 65.662
+            lon: 38.221114
+          - lat: 65.51236
+            lon: 38.121114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 1
+  - case: update failed long id
+    http:
+      headers:
+        content-type: application/json
+      url: 92233720368547758078
+      params:
+        mode: update
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 65.662
+            lon: 38.221114
+          - lat: 65.51236
+            lon: 38.121114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
+  - case: update success None mode
+    http:
+      headers:
+        content-type: application/json
+      url: 5451
+      params:
+        mode: ''
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 65.662
+            lon: 38.221114
+          - lat: 65.51236
+            lon: 38.121114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 1
+  - case: update success create mode with id
+    http:
+      headers:
+        content-type: application/json
+      url: 9999
+      params:
+        mode: create
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 65.662
+            lon: 38.221114
+          - lat: 65.51236
+            lon: 38.121114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 1
+  - case: update failed create mode no id
+    http:
+      headers:
+        content-type: application/json
+      url: ''
+      params:
+        mode: create
+      json:
+        data: 33V2vw==
+        gpsTrail:
+          - lat: 65.662
+            lon: 38.221114
+          - lat: 65.51236
+            lon: 38.121114
+        matchers:
+          - vehicleModelType: '223'
+            idcSwObjectNumber: '2239021817'
+            idcHwObjectNumber: '2239018509'
+        namespace: prod
+    expected:
+      status: 0
