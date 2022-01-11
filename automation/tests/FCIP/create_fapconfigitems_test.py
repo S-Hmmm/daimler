@@ -1,5 +1,5 @@
 from common.logger import get_logger
-from common.client import Client
+from common.client import req
 from data.read_data import yaml_data_load
 from common.utils import parametrize, utc_time
 import pytest
@@ -7,8 +7,7 @@ import allure
 import yaml
 
 log = get_logger()
-method, url, cases, parameters = yaml_data_load('create_fapconfigitems.yaml')
-req = Client().req(method)
+method, url, cases, parameters = yaml_data_load('FCIP/create_fapconfigitems.yaml')
 utc_now = utc_time()
 
 
@@ -18,7 +17,7 @@ utc_now = utc_time()
 @parametrize(parameters, cases)
 def test_get_fapconfigitems(http, expected, token):
     http['headers'].update(token)
-    resp = req(url=url, **http)
+    resp = req(method, url=url, **http)
     allure.attach(str(resp.status_code).encode('utf-8'), name='status_code')
     allure.attach(str(resp.headers).encode('utf-8'), name='headers')
     if resp.content:

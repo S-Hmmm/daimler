@@ -1,4 +1,4 @@
-from common.client import Client
+from common.client import req
 from data.read_data import yaml_data_load
 from common.utils import parametrize, utc_time
 from common.logger import get_logger
@@ -7,8 +7,7 @@ import allure
 from urllib import parse
 
 log = get_logger()
-method, url, cases, parameters = yaml_data_load('update_fapconfigitems.yaml')
-req = Client().req(method)
+method, url, cases, parameters = yaml_data_load('FCIP/update_fapconfigitems.yaml')
 utc_now = utc_time()
 
 
@@ -19,7 +18,7 @@ utc_now = utc_time()
 def test_get_fapconfigitems(http, expected, token):
     http['headers'].update(token)
     http['url'] = parse.urljoin(url, str(http['url']))
-    resp = req(**http)
+    resp = req(method, **http)
     allure.attach(resp.content, name='Response')  # allure add comment
     resp_j = resp.json()
     log.info(resp_j)

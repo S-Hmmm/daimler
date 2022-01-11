@@ -1,11 +1,10 @@
-from common.client import Client
+from common.client import req
 from data.read_data import yaml_data_load
 from common.utils import parametrize, all_true
 import pytest
 import allure
 
-method, url, cases, parameters = yaml_data_load('search_bbox.yaml')
-req = Client().req(method)
+method, url, cases, parameters = yaml_data_load('FCIP/search_bbox.yaml')
 
 
 @allure.story('MFS根据vin获取FCI信息')
@@ -14,7 +13,7 @@ req = Client().req(method)
 @parametrize(parameters, cases)
 def test_bbox(http, expected, token):
     http['headers'].update(token)
-    resp = req(url=url, **http)
+    resp = req(method, url=url, **http)
     allure.attach(str(resp.status_code).encode('utf-8'), name='status_code')
     allure.attach(resp.content, name='Response')  # allure add comment
     resp_j = resp.json()

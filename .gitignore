@@ -1,1 +1,3 @@
 /faplytics/
+.*
+/dist/

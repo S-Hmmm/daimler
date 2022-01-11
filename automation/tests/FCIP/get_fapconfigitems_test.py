@@ -1,12 +1,11 @@
-from common.client import Client
+from common.client import req
 from data.read_data import yaml_load_ls
 from common.utils import parametrize_ls
 import pytest
 import allure
 from urllib import parse
 
-method, url, cases, parameters = yaml_load_ls('get_fapconfigitems.yaml')
-req = Client().req(method)
+method, url, cases, parameters = yaml_load_ls('FCIP/get_fapconfigitems.yaml')
 
 
 @allure.story('查询FCI信息')
@@ -16,7 +15,7 @@ req = Client().req(method)
 def test_get_fapconfigitems(http, expected, item_id, token):
     http['headers'].update(token)
     http['url'] = parse.urljoin(url, str(item_id))
-    resp = req(**http)
+    resp = req(method, **http)
     allure.attach(str(resp.status_code).encode('utf-8'), name='status_code')
     allure.attach(str(resp.headers).encode('utf-8'), name='header')
     if resp.content:
