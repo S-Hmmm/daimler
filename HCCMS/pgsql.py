@@ -76,3 +76,10 @@ class T1:
         with self.get_cursor() as cursor:
             execute_batch(cursor, sql, argslist=args_ls)
             print(cursor.fetchall())
+
+
+if __name__ == '__main__':
+    sql = 'select op_oso_payload from ticket.op_osopackage'
+    with PostgreSql() as pg:
+        pg.execute(sql)
+        print(pg.fetch())
