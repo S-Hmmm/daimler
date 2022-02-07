@@ -1,5 +1,6 @@
 class TestClass:
     count = 0
+    __slots__ = ('__name', 'age')  # 指定TestClass只能定义的属性
 
     def __init__(self, name):
         self.__name = name
@@ -16,10 +17,16 @@ class TestClass:
         cls.count += 1
         return object.__new__(cls)
 
+    def __call__(self):
+        return self.name
+
 
 if __name__ == '__main__':
     a = TestClass('Bob')
     b = TestClass('Tom')
     print(a.name)
     print(b.name)
-    print(TestClass.count)
+    print('count = %d' % TestClass.count)
+
+    c = TestClass('Jerry')
+    print(c())
