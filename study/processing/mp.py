@@ -1,8 +1,8 @@
 import multiprocessing as mp
 
 
-def foo(q):
-    q.put('hello')
+def foo(que):
+    que.put('hello')
 
 
 if __name__ == '__main__':
