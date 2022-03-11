@@ -142,12 +142,19 @@ class StorageClient:
 
 
 if __name__ == '__main__':
-    cli = StorageClient('ca4ad-int-hdinsight-spa-2021-11-29t09-24-11-903z')
-    file_ls = cli.ls_files('FAP5/data/incident/undecoded')
-    num = 1
-    for file in file_ls:
-        if file.endswith('.parquet'):
-            file_path = os.path.join('FAP5/data/incident/undecoded/', file)
-            dest_file_name = os.path.join('FAP5/data/incident/undecoded/', str(num) + '.parquet')
-            cli.download_file(file_path, dest_file_name)
-            num += 1
+    cli = StorageClient('fap5ea')
+    file_ls = cli.ls_files('FAP5/data/incidents/year=2022/month=3/day=10')  # spark/streaming/fap5ea
+    print(len(file_ls))
+    # download
+    # num = 1
+    # for file in file_ls:
+    #     if file.endswith('.parquet'):
+    #         file_path = os.path.join('FAP5/data/incidents/year=2022/month=3/day=9/', file)
+    #         dest_file_name = os.path.join('FAP5/data/incidents/year=2022/month=3/day=9/', str(num) + '.parquet')
+    #         cli.download_file(file_path, dest_file_name)
+    #         num += 1
+
+    # del
+    for file in file_ls[0:250]:
+        file_path = os.path.join('FAP5/data/incidents/year=2022/month=3/day=10', file)
+        cli.rm(file_path)
