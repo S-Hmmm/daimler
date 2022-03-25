@@ -1,0 +1,2 @@
+include my_pack/*.txt my_pack/*.conf
+global-exclude null.py
