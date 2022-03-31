@@ -1,6 +1,5 @@
 from lxml import etree
 import requests
-import json
 
 
 url = 'https://news.sina.com.cn/'
