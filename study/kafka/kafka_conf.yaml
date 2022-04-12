@@ -1,0 +1,15 @@
+---
+kafka:
+  security_protocol: 'SASL_SSL'
+  sasl_mechanism: 'PLAIN'
+  sasl_plain_username: '$ConnectionString'
+  sasl_plain_password: 'Endpoint=sb://ccfw-prod-eventhub-namespace.servicebus.chinacloudapi.cn/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=vjULWd4t/pGM9ffFBCcmJrQzUjb7PtbtelGixem+CVo='
+  bootstrap_servers:
+    - 'ccfw-prod-eventhub-namespace.servicebus.chinacloudapi.cn:9093'
+
+producer:
+
+consumer:
+  consumer_timeout_ms: 300000
+  auto_offset_reset: 'earliest'
+  receive_buffer_bytes: 3072000
